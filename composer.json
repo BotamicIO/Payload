@@ -5,9 +5,9 @@
         "php": ">=5.5.9",
         "league/csv": "~8.0",
         "netresearch/jsonmapper": "~0.10",
-        "symfony/property-access": "~3.0",
-        "symfony/serializer": "~3.0",
-        "symfony/yaml": "~3.0"
+        "symfony/property-access": "~2.7",
+        "symfony/serializer": "~2.7",
+        "symfony/yaml": "~2.7"
     },
     "autoload": {
         "psr-4": {
