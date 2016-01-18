@@ -3,11 +3,11 @@
     "description": "Serialisers/Deserialisers for several data-types",
     "require": {
         "php": ">=5.5.9",
-        "league/csv": "~8.0",
-        "netresearch/jsonmapper": "~0.10",
-        "symfony/property-access": "~2.7",
-        "symfony/serializer": "~2.7",
-        "symfony/yaml": "~2.7"
+        "league/csv": "^8.0",
+        "netresearch/jsonmapper": "^0.10",
+        "symfony/property-access": "^2.7|^3.0",
+        "symfony/serializer": "^2.7|^3.0",
+        "symfony/yaml": "^2.7|^3.0"
     },
     "autoload": {
         "psr-4": {
