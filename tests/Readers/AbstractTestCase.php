@@ -52,5 +52,6 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
     }
 
     abstract protected function getReader();
+
     abstract protected function getFileExtension();
 }
