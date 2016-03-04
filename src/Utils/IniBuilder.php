@@ -1,9 +1,28 @@
 <?php
 
+/*
+ * This file is part of Payload.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Payload\Utils;
 
+/**
+ * Class IniBuilder.
+ */
 class IniBuilder
 {
+    /**
+     * @param array $data
+     * @param int   $depth
+     * @param null  $prevKey
+     *
+     * @return string
+     */
     public function build(array $data, $depth = 0, $prevKey = null)
     {
         $valueOutput = null;
@@ -43,6 +62,11 @@ class IniBuilder
         return $depth ? ltrim($output) : trim($output);
     }
 
+    /**
+     * @param $value
+     *
+     * @return mixed|string
+     */
     public function escape($value)
     {
         $value = (string) $value;

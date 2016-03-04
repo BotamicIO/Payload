@@ -1,26 +1,25 @@
 # Payload
 
-Based on [Payload](https://github.com/philipbrown/payload) by [philipbrown](https://github.com/philipbrown).
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
 
-## New Features
+## Install
 
-- Serialisers **(JSON, XML, YAML, INI, CSV, Array and Value)**
-- Writers **(JSON, XML, YAML, INI, CSV, Array and Value)**
-- Bind unserialised Data to an Object via [netresearch/jsonmapper](https://github.com/netresearch/jsonmapper)
+Via Composer
 
-## Installation
-
-First, pull in the package through Composer.
-
-```js
-composer require draperstudio/payload:1.0.*@dev
+``` bash
+$ composer require draperstudio/payload
 ```
 
 ## Usage
 
 ##### Serialise an input
 
-```php
+``` php
 (new Arr())->serialise($input);
 (new Csv())->serialise($input);
 (new Ini())->serialise($input);
@@ -33,7 +32,7 @@ composer require draperstudio/payload:1.0.*@dev
 
 ##### Unserialise an input
 
-```php
+``` php
 (new Arr())->unserialise($contents, $class);
 (new Csv())->unserialise($contents, $class);
 (new Ini())->unserialise($contents, $class);
@@ -45,7 +44,7 @@ composer require draperstudio/payload:1.0.*@dev
 
 ##### Read a file and unserialise its contents
 
-```php
+``` php
 (new Arr())->read($path, $class);
 (new Csv())->read($path, $class);
 (new Ini())->read($path, $class);
@@ -57,7 +56,7 @@ composer require draperstudio/payload:1.0.*@dev
 
 ##### Serialise an input and write it into a file
 
-```php
+``` php
 (new Arr())->write($path, $input);
 (new Csv())->write($path, $input);
 (new Ini())->write($path, $input);
@@ -68,9 +67,44 @@ composer require draperstudio/payload:1.0.*@dev
 (new YamlInline())->write($path, $input);
 ```
 
-## To-Do
-- [ ] Replace [netresearch/jsonmapper](https://github.com/netresearch/jsonmapper) with [incoming/incoming](https://github.com/Rican7/incoming)
+## Change log
+
+Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+
+## Testing
+
+``` bash
+$ composer test
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details.
+
+## Security
+
+If you discover any security related issues, please email hello@draperstudio.tech instead of using the issue tracker.
+
+## Credits
+
+- [DraperStudio][link-author]
+- [All Contributors][link-contributors]
 
 ## License
 
-Payload is licensed under [The MIT License (MIT)](LICENSE).
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+[ico-version]: https://img.shields.io/packagist/v/DraperStudio/payload.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/DraperStudio/Payload/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/DraperStudio/payload.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/DraperStudio/payload.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/DraperStudio/payload.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/DraperStudio/payload
+[link-travis]: https://travis-ci.org/DraperStudio/Payload
+[link-scrutinizer]: https://scrutinizer-ci.com/g/DraperStudio/payload/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/DraperStudio/payload
+[link-downloads]: https://packagist.org/packages/DraperStudio/payload
+[link-author]: https://github.com/DraperStudio
+[link-contributors]: ../../contributors
