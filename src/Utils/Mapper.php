@@ -1,9 +1,27 @@
 <?php
 
+/*
+ * This file is part of Payload.
+ *
+ * (c) DraperStudio <hello@draperstudio.tech>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace DraperStudio\Payload\Utils;
 
+/**
+ * Class Mapper.
+ */
 class Mapper
 {
+    /**
+     * @param $input
+     * @param $class
+     *
+     * @return mixed
+     */
     public function map($input, $class)
     {
         if (is_array($input)) {
@@ -13,6 +31,11 @@ class Mapper
         return (new \JsonMapper())->map($input, new $class());
     }
 
+    /**
+     * @param $input
+     *
+     * @return mixed
+     */
     private function arrayToObject($input)
     {
         return json_decode(json_encode($input));
