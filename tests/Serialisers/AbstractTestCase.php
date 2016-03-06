@@ -39,5 +39,6 @@ abstract class AbstractTestCase extends \PHPUnit_Framework_TestCase
     }
 
     abstract protected function getSerialiser();
+
     abstract protected function getExpectedOutput();
 }

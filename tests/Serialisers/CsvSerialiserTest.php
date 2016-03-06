@@ -22,9 +22,9 @@ class CsvSerialiserTest extends AbstractTestCase
 {
     protected function getExpectedOutput()
     {
-        return "hello
+        return 'hello
 world
-";
+';
     }
 
     protected function getSerialiser()

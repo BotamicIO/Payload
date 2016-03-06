@@ -27,10 +27,10 @@ class ArrayUnserialiser implements Unserialiser
      */
     public function unserialise($input, $class = null)
     {
-        if(!is_array($input)) {
+        if (!is_array($input)) {
             $input = eval("return $input;");
         }
-        
+
         if (!is_null($class)) {
             return (new Mapper())->map($input, $class);
         }
